@@ -5,6 +5,11 @@ on:
     - cron: "0 * * * *"
   push:
     branches: master
+  workflow_dispatch:
+    inputs:
+      git-ref:
+        description: Git Ref (Optional)    
+        required: false
 
 jobs:
   update-gist:
